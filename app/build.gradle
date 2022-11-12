@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+apply from: '../shared_dependencies.gradle'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.osama.pro.app"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    lintOptions{
+        checkReleaseBuilds false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dynamicFeatures = [':features']
+}
+
+dependencies {
+    implementation project(":core")
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // Navigation Components
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version"
+    implementation "androidx.preference:preference-ktx:$preference_version"
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    /**
+     * Testing
+     */
+    testImplementation 'app.cash.turbine:turbine:0.7.0'
+    testImplementation "io.kotest:kotest-assertions-core:$kotest_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    androidTestImplementation "io.mockk:mockk-android:$mockk_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_version"
+    androidTestImplementation "androidx.test:core-ktx:$android_test"
+    androidTestImplementation "androidx.test:rules:$android_test"
+    androidTestImplementation "androidx.test:runner:$android_test"
+    androidTestImplementation "androidx.test.ext:junit:1.1.3"
+}

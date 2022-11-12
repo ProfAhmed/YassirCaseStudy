@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+apply from: '../shared_dependencies.gradle'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        buildConfigField("String", "Movie_API_KEY", '"c9856d0cb57c3f14bf75bdc6c063b8f3"')
+        buildConfigField("String", "BASE_URL", '"https://api.themoviedb.org/3/"')
+        buildConfigField("String", "HOSTNAME", '"api.themoviedb.org"')
+        buildConfigField("String", "PARAPHRASE", '"dicoding"')
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures{
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    //noinspection DifferentStdlibGradleVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    // Room
+    api "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    androidTestImplementation "androidx.room:room-testing:$room_version"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    // OkHttp Interceptor
+    api "com.squareup.okhttp3:okhttp:$okhttp_version"
+    api "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    implementation "com.android.support.test.espresso:espresso-idling-resource:$idling_version"
+    // Database Encryption
+    implementation 'net.zetetic:android-database-sqlcipher:4.5.0'
+    implementation "androidx.sqlite:sqlite-ktx:2.1.0"
+}

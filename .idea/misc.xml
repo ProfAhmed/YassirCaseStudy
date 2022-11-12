@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2155" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/activity_detail.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/activity_home.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/activity_search_result.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/activity_splash.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/app_bar_home.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/fragment_movie.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/fragment_tv_show.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/layout_content_detail.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/state_loading.xml" value="0.10104166666666667" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/state_no_connection.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/layout/state_no_result.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/menu/search_menu.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2155" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.248" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/app/src/main/res/xml/root_preferences.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/core/src/main/res/layout/item_row_layout.xml" value="0.190625" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/features/src/main/res/layout/fragment_favorite.xml" value="0.10104166666666667" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/features/src/main/res/layout/fragment_favorite_container.xml" value="0.2421875" />
+        <entry key="..\:/Osama/TheMovieDB-Dummy/features/src/main/res/layout/state_empty.xml" value="0.10104166666666667" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/app/src/main/res/layout/fragment_movie.xml" value="0.2" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/app/src/main/res/layout/fragment_tv_show.xml" value="0.2" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/app/src/main/res/layout/state_loading.xml" value="0.2" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/core/src/main/res/drawable/ic_baseline_broken_image_24.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/core/src/main/res/layout/item_row_layout.xml" value="0.1" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/features/src/main/res/layout/fragment_favorite.xml" value="0.1" />
+        <entry key="..\:/Users/edwin/AndroidStudioProjects/TheMovieDB-Dummy/features/src/main/res/layout/fragment_favorite_container.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="dagger.Binds" />
+    </list>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/osama/pro/app/utils/ReleaseTree.kt" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
